@@ -1,8 +1,9 @@
 [suu面具网盘仓库](https://www.lanzouq.com/b0aenhnib)
+[Github Wiki](https://github.com/4accccc/vivo-Magisk-suu/wiki)
 # 这是suu版本面具
 # 这个版本的面具使用"suu"命令获得root授权
 # 为了那些想要root自己vivo手机又不想让自己手机变砖的人
-# 你可以跟着下面的`Building and Development`来自己编译Magisk，或者去`Releases`界面下载现成的
+# 你可以跟着下面的`编译教程`来自己编译Magisk，或者去`Releases`界面下载现成的
 # 好好享受! :)
 
 
@@ -13,40 +14,53 @@
 #### 此软件并不受谷歌官方支持
 #### 此版本的Magisk也不受Magisk官方支持
 
-## 反馈Bugs
+## Introduction & 简介
+
+Magisk 是由一系列开源应用组成的用来自定义安卓的应用，支持安卓6.0+。<br>
+一些突出的特点如下
+
+- **MagiskSUU**: 为应用提供root访问权限
+- **Magisk Modules**: 通过安装模块来修改只读分区
+- **MagiskBoot**: 用来解包和重打包安卓boot镜像的最完善的工具
+- **Zygisk**: 在每个安卓应用进程中运行自定义代码
+- **MagiskHide**: 将Magisk从root检测 / 系统完整性检查中隐藏 **(此功能仅限Magisk 23.0之前的版本或Delta/Kitsune版本面具)**
+
+
+## Bug Reports & 反馈Bugs
 
 用这个版本就别想着反馈bug了，他们不会管的
 
-## Building and Development
-## 编译教程
+## Building and Development & 编译教程
 
-- 首先安装Android Studio
-- 安装git，打开cmd输入`git clone --recurse-submodules https://github.com/4accccc/vivo-Magisk-suu.git`
+- 首先安装Android Studio以及git
+- 打开cmd输入`git clone --recurse-submodules https://github.com/4accccc/vivo-Magisk-Delta-suu.git`
 - 安装 Python 版本3.8+ \
-  (Windows 用户: 选中 **'Add Python to PATH'**, 安装完成后命令行输入`pip install colorama`)
+  (Windows 用户: 选中 **'Add Python to PATH'**) \
+  (Windows 可选)安装完成后命令行输入`pip install colorama`
 - 调整系统设置使程序能够使用Android Studio自带的JDK:
   - macOS: `export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/Contents/Home"`
   - Linux: `export PATH="/path/to/androidstudio/jre/bin:$PATH"`
-  - Windows: 将`C:\Path\To\Android Studio\jre\bin` 加入环境变量 `PATH`
+  - Windows: 将 `C:\Path\To\Android Studio\jre\bin` 加入环境变量 `PATH` \
+  也可在网上下载jdk17并安装，将 `X:\Path\To\Java\jdk-17\bin` 加入环境变量 `PATH`
 - 新建名为 `ANDROID_SDK_ROOT` 的环境变量，变量值输入Android SDK 文件夹对应地址 (Android Studio设置里能找到)
 - 运行`./build.py ndk`以下载ndk
 - 运行`./build.py -r all`开始构建 Magisk
 
-## Signing and Distribution
+## Signing and Distribution & 签名以及分发
 
-- The certificate of the key used to sign the final Magisk APK product is also directly embedded into some executables. In release builds, Magisk's root daemon will enforce this certificate check and reject and forcefully uninstall any non-matching Magisk apps to protect users from malicious and unverified Magisk APKs.
-- To do any development on Magisk itself, switch to an **official debug build and reinstall Magisk** to bypass the signature check.
-- To distribute your own Magisk builds signed with your own keys, set your signing configs in `config.prop`.
-- Check [Google's Documentation](https://developer.android.com/studio/publish/app-signing.html#generate-key) for more details on generating your own key.
+- 用来签名 Magisk 应用的证书也会被直接内嵌于一些可执行文件中。在发行版(release)中，Magisk 的 root 守护进程(daemon)将强制检查应用数字证书并且会卸载任何签名不符的Magisk软件以使用户远离恶意以及未经认证的 Magisk 应用。
+- 若你想对 Magisk 本身作任何开发，请使用 **官方的debug版并且重新安装 Magisk** 以绕过签名检查
+- 如果你想分发使用你自己签名证书的Magisk应用，请在配置文件`config.prop`中设置你的签名
+- 请阅 [谷歌官方开发者文档](https://developer.android.com/studio/publish/app-signing.html#generate-key) 以获取更多关于生成你自己的签名的详情
 
-## Translation Contributions
+## Translation Contributions & 贡献翻译
 
-Default string resources for the Magisk app and its stub APK are located here:
+Magisk 应用的默认字符资源存储在以下位置:
 
 - `app/src/main/res/values/strings.xml`
 - `stub/src/main/res/values/strings.xml`
 
-Translate each and place them in the respective locations (`[module]/src/main/res/values-[lang]/strings.xml`).
+翻译他们然后放入以下位置 (`[module]/src/main/res/values-[语言]/strings.xml`).
 
 ## License
 
