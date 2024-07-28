@@ -1,6 +1,6 @@
-[中文用户往这里看过来](https://github.com/4accccc/vivo-Magisk-suu/blob/master/README_Chinese.MD)
-
-[my suu magisk netdisk](https://www.lanzouq.com/b0aenhnib)
+[中文用户往这里看过来](https://github.com/4accccc/vivo-Magisk-suu/blob/master/README_Chinese.MD)  
+[Github Wiki](https://github.com/4accccc/vivo-Magisk-suu/wiki)  
+[my suu magisk netdisk](https://www.lanzouq.com/b0aenhnib)  
 # This is the "suu" version of Magisk.
 # This version of Magisk use "suu" command to get root permission. 
 # For those vivo users who want to root their vivo phones without being bricked.
