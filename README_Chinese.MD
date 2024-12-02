@@ -32,19 +32,23 @@ Magisk 是由一系列开源应用组成的用来自定义安卓的应用，支�
 
 ## Building and Development & 编译教程
 
-- 首先安装Android Studio以及git
+- 首先安装Android Studio
+- Windows用户，打开设置中的开发者模式(我们需要符号链接支持)。
+- 安装Git:
+  在类Unix系统中，选择你喜欢的包管理器安装Git即可。 \
+  在Windows系统中，在Git官网找到最新版安装即可，确保安装过程中启用“Enable symbolic links”选项。
 - 打开cmd输入`git clone --recurse-submodules https://github.com/4accccc/vivo-Magisk-Delta-suu.git`
 - 安装 Python 版本3.8+ \
   (Windows 用户: 选中 **'Add Python to PATH'**) \
   (Windows 可选)安装完成后命令行输入`pip install colorama`
 - 调整系统设置使程序能够使用Android Studio自带的JDK:
-  - macOS: `export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/Contents/Home"`
-  - Linux: `export PATH="/path/to/androidstudio/jre/bin:$PATH"`
-  - Windows: 将 `C:\Path\To\Android Studio\jre\bin` 加入环境变量 `PATH` \
-  也可在网上下载jdk17并安装，将 `X:\Path\To\Java\jdk-17\bin` 加入环境变量 `PATH`
-- 新建名为 `ANDROID_SDK_ROOT` 的环境变量，变量值输入Android SDK 文件夹对应地址 (Android Studio设置里能找到)
+  最好的方式是新建一个名为 `ANDROID_STUDIO` 的环境变量，变量值输入Android Studio安装地址。编译脚本将自动寻找并使用附带的JDK。 \
+  也可在网上下载jdk17并安装，但本教程不涉及这方面。
+- 新建名为 `ANDROID_HOME` 的环境变量，变量值输入Android SDK 文件夹对应地址 (Android Studio设置里能找到)
 - 运行`./build.py ndk`以下载ndk
 - 运行`./build.py -r all`开始构建 Magisk
+- 要开始开发，请使用 Android Studio 打开项目。此 IDE 可用于APP（Kotlin/Java）和native代码。
+- 您也可以在 `config.prop` 中进行自定义设置. 仓库中提供了一个示例文件 `config.prop.sample` .
 
 ## Signing and Distribution & 签名以及分发
 
