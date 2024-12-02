@@ -51,9 +51,9 @@ THE OFFICAL MAGISK DOESNT HAVE A SUU VERSION SO PLZ STOP!
 - Install Python 3.8+ \
   (Windows only: select **'Add Python to PATH'** in installer.) \
   (Optional on Windows): Run **pip install colorama** to install the colorama python package.
-- Configure to use the JDK bundled in Android Studio:
+- Configure to use the JDK bundled in Android Studio: \
   The recommended option is to set environment variable **ANDROID_STUDIO** to the path where your Android Studio is installed. The build script will automatically find and use the bundled JDK. \
-  You can also setup JDK 17 yourself, but this guide will not cover the instructions.
+  You can also setup JDK 17 yourself, but this guide will not cover the instructions. \
 - Set environment variable **ANDROID_HOME** to the Android SDK folder. This path can be found in Android Studio settings.
 - Run `./build.py ndk` to let the script download and install NDK for you
 - To start building, run `build.py -r all`
