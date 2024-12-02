@@ -41,7 +41,7 @@ Magisk 是由一系列开源应用组成的用来自定义安卓的应用，支�
 - 安装 Python 版本3.8+ \
   (Windows 用户: 选中 **'Add Python to PATH'**) \
   (Windows 可选)安装完成后命令行输入`pip install colorama`
-- 调整系统设置使程序能够使用Android Studio自带的JDK:
+- 调整系统设置使程序能够使用Android Studio自带的JDK: \
   最好的方式是新建一个名为 `ANDROID_STUDIO` 的环境变量，变量值输入Android Studio安装地址。编译脚本将自动寻找并使用附带的JDK。 \
   也可在网上下载jdk17并安装，但本教程不涉及这方面。
 - 新建名为 `ANDROID_HOME` 的环境变量，变量值输入Android SDK 文件夹对应地址 (Android Studio设置里能找到)
