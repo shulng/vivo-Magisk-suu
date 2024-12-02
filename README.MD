@@ -24,6 +24,7 @@ Some highlight features:
 - **Magisk Modules**: Modify read-only partitions by installing modules
 - **MagiskBoot**: The most complete tool for unpacking and repacking Android boot images
 - **Zygisk**: Run code in every Android applications' processes
+- **MagiskHide**: Hide Magisk from root detections / system integrity checks **(Only avaliable before Magisk 23.0 or Delta/Kitsune Mask)**
 
 ## Downloads
 
